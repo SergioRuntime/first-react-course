@@ -9,8 +9,11 @@
 import React from "react";
 //Analogo a appendChild
 import ReactDOM from "react-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
-import Badge from "./components/badge";
+import "./global.css";
+import BadgeNew from "./pages/BadgeNew"; // IMPORTANTE "COMPONENTES EN MAYÚSCULAS" !!!!!!!
+//import Badge from "./components/badge";
 
 //Se llama JSX, tener html sin ser string. En cada archivo que utilicemos JSX hay que hacer el import from React.
 // {} --> Esto se llama props o properties, que son los atributos en React.
@@ -28,7 +31,7 @@ const element = React.createElement(
 // const sum = () => 2 + 2;
 
 //Acordarse que si metemos una variable, las comillas cambian a comillas simples de lado.
-// const element = React.createElement("h1", {}, `Hola, soy ${name}`); 
+// const element = React.createElement("h1", {}, `Hola, soy ${name}`);
 
 // {} No solo son variables si no también expresiones que se van a evaluar.
 // const jsx = <h1>Hola soy, {sum()} </h1>;
@@ -56,7 +59,17 @@ const element = React.createElement(
 const container = document.getElementById("root");
 
 // ReactDOM.render(__qué__, __dónde__); <-- Pseudocodigo es como se llama para omitir seciones de codigo o para dar una explicación.
-ReactDOM.render(<Badge />, container);
+ReactDOM.render(
+  /*<Badge
+    firstName="Duque"
+    lastName="Martin"
+    jobTitle="Jr. Front-end"
+    twitter="SergioRuntime"
+    avatarUrl="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043232-avatar-batman-comics-hero_113278.png"
+  />*/
+  <BadgeNew />,
+  container
+);
 
 // AZÚCAR SINTÁCTICO "JSX"
 /*

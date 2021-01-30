@@ -1,0 +1,35 @@
+.Navbar {
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: #1C3643;
+  }
+  
+  .Navbar__brand {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+  }
+  
+  .Navbar__brand:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .Navbar__brand-logo {
+    margin-right: 0.5rem;
+  }
+
+  .logo {
+    height: 100%;
+  }
+
+  .BadgeNew__hero {
+    background-image: url(https://wallpaperaccess.com/full/188653.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .img-fluid {
+    width: 140px;
+    padding: 20px 20px 20px 10px;
+  }
