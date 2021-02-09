@@ -1,0 +1,35 @@
+.BadgesList li {
+    margin-bottom: 16px;
+  }
+
+  .BadgesListItem {
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.23);
+    border-radius: 5px;
+    display: flex;
+    padding: 16px;
+    margin: 0px 0px 10px 0px;
+  }
+  
+  .BadgesListItem__avatar {
+    border-radius: 50%;
+    background: #a3a3a3;
+    margin-right: 8px;
+    width: 80px;
+    height: 80px;
+  }
+  .Twitter__name {
+    font-weight: bold;
+  }
+
+  .Twitter__id-name {
+    color: #1da1f2;
+    
+  }
+  .Twitter__logo {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    background-repeat: no-repeat;
+  }

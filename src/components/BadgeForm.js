@@ -1,36 +1,34 @@
 import React from "react";
 
 class BadgeForm extends React.Component {
-//   state = {
-//       jobTitle: "Designer", //En en caso que queramos inicializar el estado "jobTitle" cuando recargemos la página, nos saldrá ya escrito. El usuario siempre lo puedo cambiar.
-//   };
+  //   state = {
+  //       jobTitle: "Designer", //En en caso que queramos inicializar el estado "jobTitle" cuando recargemos la página, nos saldrá ya escrito. El usuario siempre lo puedo cambiar.
+  //   };
   // handleChange = (e) => {
-    // console.log({
-    //  name: e.target.name,
-    //  value: e.target.value,
-    // });
+  // console.log({
+  //  name: e.target.name,
+  //  value: e.target.value,
+  // });
 
-    //  this.setState({
-    //    [e.target.name]: e.target.value,
-    //   });
-    // };
+  //  this.setState({
+  //    [e.target.name]: e.target.value,
+  //   });
+  // };
 
   handleClick = (e) => {
     console.log("Button was clicked");
   };
 
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form was submitted");
-    console.log(this.state) //Cuando termine el formulario será impreso el estado.
-  };
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Form was submitted");
+  //   console.log(this.state) //Cuando termine el formulario será impreso el estado.
+  // };
 
   render() {
     return (
       <div>
-        <h1>New Attendant</h1>
-
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             {/*Buscar "Form-Groups" Bootstrap     THAT'S THE WAY HOW TO COMMENT INSIDE CHILDREN SECTION REACT/JSX*/}
             <label>First Name</label>
@@ -90,6 +88,8 @@ class BadgeForm extends React.Component {
           <button onClick={this.handleClick} className="btn btn-primary">
             Save
           </button>
+
+          {this.props.error && (<p className="text-danger">{this.props.error.message}</p>)}
         </form>
       </div>
     );

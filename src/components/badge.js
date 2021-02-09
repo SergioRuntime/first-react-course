@@ -1,31 +1,29 @@
 import React from "react";
 
 import "./styles/styles.css";
-import confLogo from "../images/logo-website-cropped-website-logo-header-vreference-29.png"; // En el inspect de Google, si lo inspecionamos con React, en el nombre de la imagen nos aparece un número, es el HASH.
+import confLogo from "../images/clouds-logo.png"; // En el inspect de Google, si lo inspecionamos con React, en el nombre de la imagen nos aparece un número, es el HASH.
+import Gravatar from "./Gravatar";
 
 class Badge extends React.Component {
   render() {
-
     return (
       <div className="badge">
         <div className="badge__header">
           <img src={confLogo} alt="Logo de la conferencia" />
         </div>
         <div className="badge__section-name">
-            <img className="badge__avatar" src={this.props.avatarUrl} alt="Avatar"></img>
+          <Gravatar className="badge__avatar" email={this.props.email} alt="Avatar" />
           <h1>
-            {this.props.firstName}  
-          <br />
+            {this.props.firstName}
+            <br />
             {this.props.lastName}
-          </h1> 
+          </h1>
         </div>
         <div className="badge__section-info">
-            <h3>{this.props.jobTitle}</h3>
-            <div>@{this.props.twitter}</div>
+          <h3>{this.props.jobTitle}</h3>
+          <div>@{this.props.twitter}</div>
         </div>
-        <div className="badge__footer">
-           #PractiseREACT
-        </div>
+        <div className="badge__footer">#PractiseREACT</div>
       </div>
     );
   }
@@ -35,7 +33,7 @@ export default Badge;
 
 // Comentario en JSX --> /* ........ */
 // Comentario en Javascript --> //
-
+// Comentario en un Child --> [/* ......... */]
 
 //POSIBLE SOLUCIÓN PARA NO ESCRIBIR TANTAS VECES "this.props..."
 

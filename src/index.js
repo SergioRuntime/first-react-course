@@ -12,8 +12,10 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 
 import "./global.css";
-import BadgeNew from "./pages/BadgeNew"; // IMPORTANTE "COMPONENTES EN MAYÚSCULAS" !!!!!!!
-//import Badge from "./components/badge";
+//import BadgeNew from "./pages/BadgeNew"; // IMPORTANTE "COMPONENTES EN MAYÚSCULAS" !!!!!!!
+//import Badges from "./pages/Badges";
+//import Badge from "./components/Badge";
+import App from "./components/App"; //Aqui estará Browser-router y las routes.
 
 //Se llama JSX, tener html sin ser string. En cada archivo que utilicemos JSX hay que hacer el import from React.
 // {} --> Esto se llama props o properties, que son los atributos en React.
@@ -66,8 +68,10 @@ ReactDOM.render(
     jobTitle="Jr. Front-end"
     twitter="SergioRuntime"
     avatarUrl="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043232-avatar-batman-comics-hero_113278.png"
-  />*/
-  <BadgeNew />,
+  />
+  <BadgeNew />
+<Badges />*/
+  <App />,
   container
 );
 
